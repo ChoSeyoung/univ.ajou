@@ -7,6 +7,8 @@ import Aside from './components/Aside';
 import Jooyeon from './Jooyeon/Jooyeon';
 import Woojung from './Woojung/Woojeong';
 import Jiwon from './Jiwon/Jiwon';
+import Login from './Jiwon/Login';
+import Signup from './Jiwon/Signup';
 import Haesoo from './Haesoo/Haesoo';
 import Urllist from './woojung/Urllist';
 import Timetable from './woojung/Timetable';
@@ -25,6 +27,8 @@ class App extends Component {
                     <Route path="/leisure" component={Haesoo} />
 
                     <Route path="/volunteer" component={Jiwon} />
+                    <Route path="/login" component={Login} />
+                    <Route path="/signup" component={Signup} />
 
                     <Route path="/todo" component={Woojung} />
                     <Route path="/timetable" component={Timetable} />
