@@ -69,5 +69,36 @@ router.get('/week', (req, res, next) => {
     });
 })
 
+router.get('/leicity', (req, res, next) => {
+    db.query("select city from `youth_agency` group by city ", (err, rows) => {
+        if(!err){
+            res.send(rows);
+        } else {
+            console.log(`query error : ${err}`);
+            res.send(err);
+        }
+    });
+});
 
+router.get('/leicategory', (req, res, next) => {
+    db.query("select category from `youth_agency` group by category ", (err, rows) => {
+        if(!err){
+            res.send(rows);
+        } else {
+            console.log(`query error : ${err}`);
+            res.send(err);
+        }
+    });
+});
+
+router.get('/leifilter', (req, res, next) => {
+    db.query("select * from `youth_agency`", (err, rows) => {
+        if(!err){
+            res.send(rows);
+        } else {
+            console.log(`query error : ${err}`);
+            res.send(err);
+        }
+    });
+});
 module.exports = router;
