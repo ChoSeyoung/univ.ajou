@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import lunch_flower from '../shared/image/lunch.png';
 import '../shared/common.css';
-import '../jiwon/jiwon.css';
+import './jiwon.css';
 //css 적용 회원가입 창
 
 class Signup2 extends Component {

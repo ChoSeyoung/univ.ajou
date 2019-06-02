@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import lunch_flower from '../shared/image/lunch.png';
 import '../shared/common.css';
-import '../jiwon/jiwon.css';
+import './jiwon.css';
 import {Redirect} from 'react-router-dom';
 //db 연결 성공 login창
 

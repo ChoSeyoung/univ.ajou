@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
-import Aside from './components/Aside';
+import Aside from './Components/Aside';
 
-import Jooyeon from './Jooyeon/Jooyeon';
-import Woojung from './Woojung/Woojeong';
+import Jooyeon from './Juyeon/Juyeon';
+import Woojung from './Woojeong/Woojeong';
 import Jiwon from './Jiwon/Jiwon';
 import Login from './Jiwon/Login';
 import Signup from './Jiwon/Signup';
 import Haesoo from './Haesoo/Haesoo';
-import Urllist from './woojung/Urllist';
-import Timetable from './woojung/Timetable';
+import Urllist from './Woojeong/Urllist';
+import Timetable from './Woojeong/Timetable';
 
 class App extends Component {
     render() {
