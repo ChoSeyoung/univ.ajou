@@ -4,14 +4,14 @@ import './App.css';
 
 import Aside from './components/Aside';
 
-import Jooyeon from './Jooyeon/Jooyeon';
-import Woojung from './Woojung/Woojeong';
+import Juyeon from './Juyeon/Juyeon';
+import Woojeong from './Woojeong/Woojeong';
 import Jiwon from './Jiwon/Jiwon';
 import Login from './Jiwon/Login';
 import Signup from './Jiwon/Signup';
 import Haesoo from './Haesoo/Haesoo';
-import Urllist from './woojung/Urllist';
-import Timetable from './woojung/Timetable';
+import Urllist from './woojeong/Urllist';
+import Timetable from './woojeong/Timetable';
 
 class App extends Component {
     render() {
@@ -22,7 +22,7 @@ class App extends Component {
 
                 <div id="content">
                 <Switch>
-                    <Route path="/meal" component={Jooyeon} />
+                    <Route path="/meal" component={Juyeon} />
                     
                     <Route path="/leisure" component={Haesoo} />
 
@@ -30,7 +30,7 @@ class App extends Component {
                     <Route path="/login" component={Login} />
                     <Route path="/signup" component={Signup} />
 
-                    <Route path="/todo" component={Woojung} />
+                    <Route path="/todo" component={Woojeong} />
                     <Route path="/timetable" component={Timetable} />
                     <Route path="/urllist" component={Urllist} />
                 </Switch>

@@ -1,12 +1,18 @@
 import React, { Component, Fragment} from 'react';
 import lunch_flower from '../shared/image/lunch.png';
 import '../shared/common.css';
+import './components/Headerbar.css';
 
 class Urllist extends Component{
     render(){
         return(
             <Fragment>
+
                 <p className="vol_title">Urllist</p>
+                <h2 className = "App-header">URL TOP 5</h2>
+                
+                <br /><br /><br />
+
                 <img src={lunch_flower} alt="" />
                 
                 <br /><br /><br />
