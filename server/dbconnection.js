@@ -2,11 +2,11 @@ const mysql = require('mysql');
 const secure = require('./secure.json');
 
 const connection = mysql.createPool({
-  host: 'DB Adress',
-  port: 3360,
-  user: 'user',
-  password: 'password',
-  database: 'database'
+  host: secure.host,
+  port: secure.port,
+  user: secure.user,
+  password: secure.password,
+  database: secure.database
 });
 
 module.exports=connection;
