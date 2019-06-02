@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+/*IBM PLEX MONO*/
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap');
+/*Nanum Myeongjo*/
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
+/*Nanum Gothic*/
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+/*Gothic A1*/
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1&display=swap');
+
+@font-face{
+    font-family : 'Notera';
+    src: url('./fonts/Notera.woff');
+}
+@font-face{
+    font-family : 'Signerica';
+    src: url('./fonts/Signerica.woff');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color:#f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #d3d3d3;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    width: 16px;
+    height: 16px;
+    background: #f1f1f1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    margin: 0;
+}
+
+a:link,
+a:visited,
+a:link{
+    color: #444;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.pic{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+    margin-bottom: 50px;
+    display: inline-block;
+    background-image: url(./image/visitor.jpg);
+    background-size: 100%;
+}
+.copywriter{
+    margin-top: 100px;
+}
+aside{
+    width: calc(35% - 40px);
+    height: 100%;
+    background-color: #ffb3a6;
+    font-family: 'IBM Plex Mono';
+    text-align: right;
+    padding: 40px 20px 0 20px;
+    float: left;
+    position: fixed;
+}
+
+#content{
+    width: calc(65% - 40px);
+    padding: 40px 20px 0 20px;
+    float: right;
+    text-align: center;
+}
+
+/*주연이꺼*/
+#content .lunch_title{
+    font-family: 'Notera';
+    font-size: 100px;
+    color: #ffb3a6;
+}
+
+#content .lunch_content{
+    font-family: 'Nanum Myeongjo';
+    font-size: 20px;
+}
+
+#content .lunch_table{
+    width: 100%;
+    text-align: center;
+}
+
+#content .lunch_table thead tr th{
+    font-family: 'Signerica';
+    font-size: 30px;
+    color: #ffb3a6;
+}
+
+#content .lunch_table tbody tr td{
+    font-family: 'Nanum Myeongjo';
+    font-size: 16px;
+    padding: 5px 0 5px 0;
+}
+#content .lunch_flower{
+    
+    background-image: url('./image/lunch.png');
+}
+#content .week{
+    width : 20%;
+    display : inline-block;
+    font-family: 'Nanum Myeongjo';
+    font-size: 16px;
+    vertical-align: top;
+    line-height: 32px;
+}
+#content .lunch_week{
+    font-family: 'Signerica';
+    font-size: 30px;
+    color: #ffb3a6;
+    width: 20%;
+    display: inline-block;
+}
+
+
+
+/*우정이꺼*/
+#content .todo{
+    width: 45%;
+    border: 1px solid #ffb3a6;
+    border-radius: 5px;
+    font-family: 'Nanum Gothic';
+    text-align: left;
+    padding: 20px;
+    margin: 15px 5px 0 5px;
+    display: inline-block;
+    position: relative;
+}
+
+#content .todo input[type="checkbox"] {
+    display: none;
+}
+    
+#content .todo input[type="checkbox"]+label em {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    background: url(./image/bg_chkbox.gif) 0 0 no-repeat;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#content .todo input[type="checkbox"]:checked+label em {
+    background-position: -38px 0;
+}
+
+#content .todo .xi-ellipsis-v{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #ea002c;
+}
+
+#content hr{
+    border: 3px solid #ffb3a6;
+    margin-bottom: 20px;
+    width: 50px;
+}
+
+#content .todo_title{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+#content .todo_content{
+    font-size: 1.2rem;
+    margin: 20px 0 10px 0;
+}
+#content .todo_date{
+    font-size: 1rem;
+    font-weight: bold;
+    color: gray;
+    margin-bottom: 10px 0 10px 0;
+}
+#content .todo_division{
+    border: 0.5px solid #ffb3a6;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*지원해수*/
+
+#content .vol_title{
+    font-family: 'Signerica';
+    color: #ffb3a6;
+    font-size: 60px;
+    text-align: left;
+}
+#content .filter_box{
+    width: 100%;
+    line-height: 40px;
+    text-align: left;
+}
+
+#content .filter_box .filter_group:first-child{
+    margin-left: 20px;
+}
+#content .filter_box .filter_group{
+    text-align: left;
+    height: 80px;
+    display: inline-block;
+    margin-right: 40px;
+    vertical-align: bottom;
+}
+#content .filter_box .filter_group label{
+    font-size: 12px;
+}
+#content .filter_box .filter_group select,
+#content .filter_box .filter_group input[type="date"]{
+    font-family: 'Nanum Gothic';
+    font-size: 1rem;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-bottom: 3px solid rgba(255, 179, 166,0.3);
+}
+
+#content input[type="date"]:hover{
+    cursor: pointer;
+}
+
+#content select:hover{
+    border-bottom: 3px solid rgba(255, 179, 166,1);
+    cursor: pointer;
+}
+
+#content .filter_list{
+    height: 220px;
+    overflow: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+#content .filter_list .list_group{
+    width: 293.7px;
+    height: 200px;
+    border-right: 1px solid #ffb3a6;
+    font-family: 'Nanum Gothic';
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 2rem;
+}
+#content .filter_list .list_group:last-child{
+    border: none;
+}
+#content .filter_list .list_group .rem15{ font-size: 1.5rem }
+#content .filter_list .list_group .rem1{ font-size: 1rem }
+#content .filter_list .list_group .rem09{ font-size: 0.9rem }
+#content .filter_list .list_group .rem08{ font-size: 0.8rem }
+#content .filter_map{
+    border: 1px solid black;
+    height: 400px;
+}
