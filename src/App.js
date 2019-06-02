@@ -1,34 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
+import Aside from './components/Aside';
+
+import Jooyeon from './Jooyeon/Jooyeon';
+import Woojung from './Woojung/Woojeong';
+import Jiwon from './Jiwon/Jiwon';
+import Haesoo from './Haesoo/Haesoo';
+
 class App extends Component {
+    render() {
+        return (
+            <Router>
 
-    state = { username: null };
+                <Aside />
 
-    componentDidMount() {
-        fetch('/api/getUsername')
-            .then(res => res.json())
-            .then(user => this.setState({ username: user.username }));
+                <div id="content">
+                <Switch>
+                    <Route path="/meal" component={Jooyeon} />
+                    <Route path="/todo" component={Woojung} />
+                    <Route path="/leisure" component={Haesoo} />
+                    <Route path="/volunteer" component={Jiwon} />
+                </Switch>
+                </div>
+            </Router>
+        );
     }
-
-  render() {
-    const { username } = this.state;
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-          <div>
-              {username ? <h1>{`Hello ${username}`}</h1> : <h1>Loading.. please wait!</h1>}
-          </div>
-      </div>
-    );
-  }
 }
 
 export default App;
