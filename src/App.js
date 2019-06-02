@@ -8,6 +8,8 @@ import Jooyeon from './Jooyeon/Jooyeon';
 import Woojung from './Woojung/Woojeong';
 import Jiwon from './Jiwon/Jiwon';
 import Haesoo from './Haesoo/Haesoo';
+import Urllist from './woojung/Urllist';
+import Timetable from './woojung/Timetable';
 
 class App extends Component {
     render() {
@@ -19,9 +21,14 @@ class App extends Component {
                 <div id="content">
                 <Switch>
                     <Route path="/meal" component={Jooyeon} />
-                    <Route path="/todo" component={Woojung} />
+                    
                     <Route path="/leisure" component={Haesoo} />
+
                     <Route path="/volunteer" component={Jiwon} />
+
+                    <Route path="/todo" component={Woojung} />
+                    <Route path="/timetable" component={Timetable} />
+                    <Route path="/urllist" component={Urllist} />
                 </Switch>
                 </div>
             </Router>
