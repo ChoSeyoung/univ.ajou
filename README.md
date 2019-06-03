@@ -19,7 +19,7 @@
 back : node.js<br>
 f/w : express.js<br>
 db : MariaDB<br>
-lib : babel, react-router-dom, webpack, morgan, nodemon, concurrently<br>
+dependency : babel, react-router-dom, webpack, morgan, nodemon, concurrently<br>
 ide : Visual Studio Code(main), Brackets(publishing)<br>
 font : IBM Plex Mono, Nanum Myeongjo, Notera, Signerica<br>
 </code></pre>
