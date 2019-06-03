@@ -15,11 +15,6 @@
 }</code></pre>
 
 <h1>기술스택</h1>
-<pre><code>front : react.js<br>
-back : node.js<br>
-f/w : express.js<br>
-db : MariaDB<br>
-dependency : babel, react-router-dom, webpack, morgan, nodemon, concurrently<br>
-ide : Visual Studio Code(main), Brackets(publishing)<br>
-font : IBM Plex Mono, Nanum Myeongjo, Notera, Signerica<br>
-</code></pre>
+<pre>HTML, CSS, JAVASCRIPT, JQUERY, REACT.JS, NODE.JS, EXPRESS.JS, MARIADB, VISUAL STUDIO CODE, BRACKET</pre>
+<h1>API</h1>
+<pre>공공데이터포털, NICE E-청소년</pre>
