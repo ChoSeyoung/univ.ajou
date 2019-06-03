@@ -1,5 +1,5 @@
 <h1>고생이 전용 게시글</h1>
-<pre><a href="https://blog.naver.com/choseyoung45/221552706274>https://blog.naver.com/choseyoung45/221552706274</a></pre>
+<pre><a href="https://blog.naver.com/choseyoung45/221552706274>https://blog.naver.com/choseyoung45/221552706274 </a></pre>
 
 <h1>최초 git pull시 다음 패키지 설치 필수</h1>
 <pre><code>yarn add morgan nodemon concurrently --dev
