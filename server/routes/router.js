@@ -14,7 +14,6 @@ router.get('/todaymain', (req, res, next) => {
         if(!err) {
             res.send(rows);
         } else {
-            console.log(`query error : ${err}`);
             res.send(err);
         }
     });
@@ -25,7 +24,6 @@ router.get('/todaydessert', (req, res, next) => {
         if(!err) {
             res.send(rows);
         } else {
-            console.log(`query error : ${err}`);
             res.send(err);
         }
     });
@@ -36,7 +34,6 @@ router.get('/thisweek', (req, res, next) => {
         if(!err) {
             res.send(rows);
         } else {
-            console.log(`query error : ${err}`);
             res.send(err);
         }
     });
@@ -47,14 +44,12 @@ router.get('/schoolname', (req, res, next) => {
         if(!err){
             res.send(rows);
         } else {
-            console.log(`query error : ${err}`);
             res.send(err);
         }
     });
 });
 
 router.get('/brown', (req, res, next) => {
-    console.log(req.query.name)
     const p = req.query.name;
     db.query("select * from `lunch` where school='"+p+"' and lunch_date = '2019-06-13'", (err, rows) => {
         res.send({rs : rows})
@@ -62,7 +57,6 @@ router.get('/brown', (req, res, next) => {
 });
 
 router.get('/week', (req, res, next) => {
-    console.log(req.query.name)
     const p = req.query.name;
     db.query("select * from `lunch` where school='"+p+"' and lunch_date between '2019-06-10' AND '2019-06-14'", (err,rows) => {
         res.send({ gs: rows})
@@ -74,7 +68,6 @@ router.get('/leicity', (req, res, next) => {
         if(!err){
             res.send(rows);
         } else {
-            console.log(`query error : ${err}`);
             res.send(err);
         }
     });
@@ -85,7 +78,6 @@ router.get('/leicategory', (req, res, next) => {
         if(!err){
             res.send(rows);
         } else {
-            console.log(`query error : ${err}`);
             res.send(err);
         }
     });
@@ -96,7 +88,6 @@ router.get('/leifilter', (req, res, next) => {
         if(!err){
             res.send(rows);
         } else {
-            console.log(`query error : ${err}`);
             res.send(err);
         }
     });
@@ -108,7 +99,6 @@ router.get('/month', (req, res, next) => {
         if(!err){
             res.send(rows);
         } else {
-            console.log(`query error : ${err}`);
             res.send(err);
         }
     })
@@ -121,21 +111,16 @@ router.get('/vol', (req, res) => {
         if(!err) {
             res.send(rows);
         }else{
-            console.log(`query error : ${err}`);
             res.send(err);
         }
     })
 })
-
-
-
 
 router.get('/june', (req, res) => {
     db.query("SELECT * FROM volunteer WHERE vol_month=6", (err, rows) => {
         if(!err) {
             res.send(rows);
         } else {
-            console.log(`query error : ${err}`);
             res.send(err);
         }
     })
@@ -146,7 +131,6 @@ router.get('/july', (req, res) => {
         if(!err) {
             res.send(rows);
         } else {
-            console.log(`query error : ${err}`);
             res.send(err);
         }
     })
@@ -157,7 +141,6 @@ router.get('/august', (req, res) => {
         if(!err) {
             res.send(rows);
         } else {
-            console.log(`query error : ${err}`);
             res.send(err);
         }
     })
@@ -169,8 +152,6 @@ router.get("/api/isLogin", (req, res) => {
     const userPw = req.query.pw;
 
     db.query("select count(*) as cnt from getuser where id='"+userId+"' and pw='"+userPw+"'", (err, rows, fields) => {
-        console.log(rows[0].cnt)
-        
         res.send({rs : rows[0].cnt});
     });
 })
@@ -183,8 +164,6 @@ router.get("/api/isSignup", (req, res) => {
     const userName = req.query.name;
 
     db.query("select count(*) as cnt from getuser where id='"+userId+"' and pw='"+userPw+"' and email='"+userEmail+"' and name='"+userName+"'", (err, rows, fields) => {
-        console.log(rows[0].cnt)
-        
         res.send({rs : rows[0].cnt});
     });
 })

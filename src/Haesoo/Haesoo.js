@@ -6,7 +6,7 @@ import { Map,GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 
 
 
-class Haesoo extends React.Component{
+class Haesoo extends Component{
     state = {
         lei_city : [],
         lei_category : [],

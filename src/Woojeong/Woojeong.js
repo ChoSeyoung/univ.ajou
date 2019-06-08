@@ -2,14 +2,8 @@ import React, { Component } from 'react';
 import TodoListTemplate from './components/TodoListTemplate';
 import Form from './components/Form';
 import TodoItemList from './components/TodoItemList';
-import lunch_flower from '../shared/image/lunch.png';
-
 
 class woojung extends Component {
-
-  
-      
-     
   
   id = 5 // 이미 0,1,2 가 존재하므로 3으로 설정
 

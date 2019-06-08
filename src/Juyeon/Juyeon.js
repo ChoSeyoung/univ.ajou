@@ -47,7 +47,7 @@ class Jooyeon extends React.Component{
     
 
     render(){
-
+    {/*
         const {today_main} = this.state;
         const today_main_list = today_main.map(function(data){
             return(
@@ -61,6 +61,8 @@ class Jooyeon extends React.Component{
                 </div>
             )
         })
+    
+
         const {today_dessert} = this.state;
         const today_dessert_list = today_dessert.map(function(data){
             return(
@@ -69,6 +71,7 @@ class Jooyeon extends React.Component{
                 </div>
             )
         })
+    
         const {this_week} = this.state;
         const this_week_list = this_week.map(function(data){
             return(
@@ -83,6 +86,8 @@ class Jooyeon extends React.Component{
                 </div>
             )
         })
+    */}
+    
         const {school_name} = this.state;
         const school_name_list = school_name.map(function(data){
             return(
