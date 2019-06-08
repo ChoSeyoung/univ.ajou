@@ -24,7 +24,7 @@ class App extends Component {
                     <Route path="/leisure" component={Haesoo} />
                     <Route path="/volunteer" component={Jiwon} />
                     <Route path="/login" component={Login} />
-                    <Route path="/signup" component={Signup} />
+                    <Route path="/signup" component={Signup} /> 
                     <Route path="/todo" component={Woojeong} />
                     <Route path="/timetable" component={Timetable} />
                     <Route path="/urllist" component={Urllist} />
