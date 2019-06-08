@@ -36,8 +36,75 @@ input[type="submit"]{
     color: LightGray;
     text-decoration : underline;
 }
+
+#content .vol_filter_box{
+    width: 100%;
+    line-height: 40px;
+    text-align: left;
+}
+#content .vol_filter_box .vol_filter_group:first-child{
+    margin-left: 20px;
+}
+#content .vol_filter_box .vol_filter_group{
+    text-align: left;
+    height: 60px;
+    display: inline-block;
+    margin-right: 40px;
+    vertical-align: bottom;
+}
+#content .vol_filter_box .vol_filter_group label{
+    font-size: 18px;
+}
+
+
+#content .vol_filter_box .vol_filter_group select,
+#content .vol_filter_box .vol_filter_group input[type="date"]{
+    font-family: 'Nanum Gothic';
+    font-size: 1.2rem;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-bottom: 3px solid rgba(255, 179, 166,0.3);
+}
 #content .vol_content{
-    font-family: 'Nanum Myeongjo';
+    font-family: 'Nanum Gothic';
     font-size: 12px;
 }
 
+#content .filter_list .vol_group{
+    width: 42%; /*지원교체*/
+    height: 250px;
+    border-right: 1px solid #ffb3a6;
+    font-family: 'Nanum Gothic';
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 2rem;
+    white-space: normal;
+    padding-left: 5%;
+    padding-right : 5%;
+    
+}
+#content .filter_list .vol_group:last-child{
+    border: none;
+}
+#content .filter_list .vol_group .rem15{ font-size: 1.5rem }
+#content .filter_list .vol_group .rem12{ font-size: 1.2rem }
+#content .filter_list .vol_group .rem1{ font-size: 1rem }
+#content .filter_list .vol_group .rem09{ font-size: 0.9rem }
+#content .filter_list .vol_group .rem08{ font-size: 0.8rem }
+#content .filter_map{
+    border: 1px solid black;
+    height: 600px;
+}
+
+
+#content .blood_donation{
+    
+    background-image: url('../shared/image/blood_donation.png');
+}
+
+#content .filter_map2{
+    border: 1px solid black;
+    height: 560px;
+}
