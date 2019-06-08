@@ -7,6 +7,7 @@ import Aside from './Components/Aside';
 import Juyeon from './Juyeon/Juyeon';
 import Woojeong from './Woojeong/Woojeong';
 import Jiwon from './Jiwon/Jiwon';
+import Haesoo from './Haesoo/Haesoo';
 import Login from './Jiwon/Login';
 import Signup from './Jiwon/Signup';
 import Urllist from './Woojeong/Urllist';
