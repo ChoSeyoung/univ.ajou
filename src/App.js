@@ -4,8 +4,8 @@ import './App.css';
 
 import Aside from './Components/Aside';
 
-import Jooyeon from './Juyeon/Juyeon';
-import Woojung from './Woojeong/Woojeong';
+import Juyeon from './Juyeon/Juyeon';
+import Woojeong from './Woojeong/Woojeong';
 import Jiwon from './Jiwon/Jiwon';
 import Login from './Jiwon/Login';
 import Signup from './Jiwon/Signup';
