@@ -72,7 +72,7 @@ class Timetable extends Component{
                     <tbody>
                         {list}
                     </tbody>
-                </table>
+                </table >
             </Fragment>
         );
         
