@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import Aside from './Components/Aside';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 3a77cc9fe03589d1c45f3ff6f15b1b2eed5663d5
 import Juyeon from './Juyeon/Juyeon';
 import Woojeong from './Woojeong/Woojeong';
 import Jiwon from './Jiwon/Jiwon';
@@ -17,20 +20,16 @@ class App extends Component {
     render() {
         return (
             <Router>
-
                 <Aside />
-
                 <div id="content">
-                <Switch>
-                    <Route path="/meal" component={Jooyeon} />
-                    
-                    <Route path="/leisure" component={Haesoo} />
 
+                <Switch>
+                    <Route path="/meal" component={Juyeon} />
+                    <Route path="/leisure" component={Haesoo} />
                     <Route path="/volunteer" component={Jiwon} />
                     <Route path="/login" component={Login} />
                     <Route path="/signup" component={Signup} />
-
-                    <Route path="/todo" component={Woojung} />
+                    <Route path="/todo" component={Woojeong} />
                     <Route path="/timetable" component={Timetable} />
                     <Route path="/urllist" component={Urllist} />
                 </Switch>
