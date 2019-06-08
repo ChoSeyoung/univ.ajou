@@ -47,7 +47,7 @@ class Jooyeon extends React.Component{
     
 
     render(){
-    {/*
+    /*
         const {today_main} = this.state;
         const today_main_list = today_main.map(function(data){
             return(
@@ -86,8 +86,7 @@ class Jooyeon extends React.Component{
                 </div>
             )
         })
-    */}
-    
+    */    
         const {school_name} = this.state;
         const school_name_list = school_name.map(function(data){
             return(
