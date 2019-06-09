@@ -210,7 +210,9 @@ router.get('/leifilter', (req, res, next) => {
 router.get('/getLeisure', (req,res,next) => {
     const a = (req.query.city);
     const b = (req.query.category);
-    db.query("select * from `youth_agency` where city like '%"+a+"%'"," and category like '%"+b+"%'", (err, rows) => {
+
+    db.query("select * from `youth_agency` where city like '%"+a+"%' and category like '%"+b+"%'", (err, rows) => {
+
         if(!err){
             res.send({rs : rows})
         } else {
