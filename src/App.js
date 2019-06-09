@@ -12,6 +12,8 @@ import Login from './Jiwon/Login';
 import Signup from './Jiwon/Signup';
 import Urllist from './Woojeong/Urllist';
 import Timetable from './Woojeong/Timetable';
+import quizNew from './Juyeon/quiz-new/App';
+import quizEnt from './Juyeon/quiz-new/App';
 
 class App extends Component {
     render() {
@@ -29,6 +31,9 @@ class App extends Component {
                     <Route path="/todo" component={Woojeong} />
                     <Route path="/timetable" component={Timetable} />
                     <Route path="/urllist" component={Urllist} />
+                    <Route path="/quiz/new" component={quizNew}/>
+                    <Route path="/quiz/ent" component={quizEnt}/>
+
                 </Switch>
                 </div>
             </Router>
