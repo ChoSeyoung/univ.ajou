@@ -6,19 +6,16 @@ import { Map,GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 
 
 
-class Haesoo extends Component{
+class Haesoo extends React.Component{
     state = {
         lei_city : [],
         lei_category : [],
         lei_filter : [],
-
+        haesoo : "가평군",
+        data : [],
         showingInfoWindow:false,
         activeMarker:{},
         selectedPlace:{}
-
-        
-
-       
     };
     
     onMarkerClick = (props, marker, e) =>
@@ -57,8 +54,24 @@ class Haesoo extends Component{
         .catch(err => console.log(err))
 
         
-
     }
+
+    nameHandler = (e) => {
+      this.setState(
+        {haesoo : e.target.value}
+      )
+      const city = this.state.haesoo;
+      const category = this.state.haesoo;
+
+      fetch('/getLeisure?city='+city+'&category='+category)
+        .then(res => (res.json()))
+        .then(data => this.setState({data:data.rs}))
+        .catch(err => console.log(err))
+      
+      console.log(this.state.data)
+    }
+    
+      
     render(){
         const {lei_city} = this.state;
         const lei_city_list = lei_city.map(function(haesoo){
@@ -78,8 +91,8 @@ class Haesoo extends Component{
             )
         })
 
-        const {lei_filter} = this.state;
-        const lei_filter_list = lei_filter.map(function(haesoo){
+        const {data} = this.state;
+        const data_list = data.map(function(haesoo){
             return(
                 <div className="list_group" >
                         <p className="rem1"><b>{haesoo.agency}</b></p>
@@ -92,8 +105,8 @@ class Haesoo extends Component{
                     </div>
             )
         })
-
-      
+    
+    
 
         return(
             <Fragment>
@@ -103,7 +116,7 @@ class Haesoo extends Component{
                     <div className="filter_group">
                         <label>시/군</label>
                         <br />
-                        <select>
+                        <select onChange={this.nameHandler}>
                             {lei_city_list}
                         </select>
                     </div>
@@ -122,7 +135,7 @@ class Haesoo extends Component{
                 <br /><br /><br />
                 
                 <div className="filter_list">
-                    {lei_filter_list}
+                    {data_list}
                 </div>
                 
                 <br />
