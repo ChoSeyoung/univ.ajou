@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import lunch_flower from '../shared/image/lunch.png';
 import '../shared/common.css';
+import adv from '../shared/image/adv.png'
 
 class Jooyeon extends React.Component{
     state = {
@@ -155,6 +156,8 @@ class Jooyeon extends React.Component{
                 <div className = "lunch_week">Fri</div>
 
                 {meal_week}
+
+                <img src={adv}/>
                
             </Fragment>
         );
