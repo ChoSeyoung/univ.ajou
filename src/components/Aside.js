@@ -7,7 +7,7 @@ class Aside extends Component{
             <aside>
                 <div className="pic"></div>
                 <h1>hi, jiwon</h1>
-                <h5><a href = "http://localhost:3000/login">login</a>/<a href = "http://localhost:3000/signup">signup</a></h5>
+                
                 <br /><br />
                 <h2>
                 <a href = "http://localhost:3000">home</a>,
