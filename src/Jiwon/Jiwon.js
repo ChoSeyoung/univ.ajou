@@ -78,7 +78,7 @@ class Jiwon extends Component{
     fetch('/date') 
       .then(res => (res.json()))
       .then(data => this.setState({M_date:data}))
-      .catch(err => console.log(err))
+      .catch(err => console.log(err)) 
 
   
   };
