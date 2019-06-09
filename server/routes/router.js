@@ -105,7 +105,7 @@ router.get("/api/isSignup", (req, res) => {
     
     const userId = req.query.id;
     const userPw = req.query.pw;
-    const userEmail = req.query.email;
+    const userEmail = req.queㄴry.email;
     const userName = req.query.name;
 
     db.query("select count(*) as cnt from getuser where id='"+userId+"' and pw='"+userPw+"' and email='"+userEmail+"' and name='"+userName+"'", (err, rows, fields) => {
@@ -172,5 +172,54 @@ router.get('/schedule', (req, res, next) => {
         res.send(rows);
     })
 });
+
+//해수//
+router.get('/leicity', (req, res, next) => {
+    db.query("select city from `youth_agency` group by city ", (err, rows) => {
+        if(!err){
+            res.send(rows);
+        } else {
+            console.log(`query error : ${err}`);
+            res.send(err);
+        }
+    });
+});
+
+router.get('/leicategory', (req, res, next) => {
+    db.query("select category from `youth_agency` group by category ", (err, rows) => {
+        if(!err){
+            res.send(rows);
+        } else {
+            console.log(`query error : ${err}`);
+            res.send(err);
+        }
+    });
+});
+
+router.get('/leifilter', (req, res, next) => {
+    db.query("select * from `youth_agency`", (err, rows) => {
+        if(!err){
+            res.send(rows);
+        } else {
+            console.log(`query error : ${err}`);
+            res.send(err);
+        }
+    });
+});
+
+router.get('/getLeisure', (req,res,next) => {
+    const a = (req.query.city);
+    const b = (req.query.category);
+    db.query("select * from `youth_agency` where city like '%"+a+"%'"," and category like '%"+b+"%'", (err, rows) => {
+        if(!err){
+            res.send({rs : rows})
+        } else {
+            console.log(`query error : ${err}`);
+            res.send(err);
+        }
+    
+    });
+});
+
 
 module.exports = router;
