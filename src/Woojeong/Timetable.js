@@ -41,11 +41,11 @@ class Timetable extends Component{
                 <br /><br /><br />
                 
                 <select name = "학년" >
-          <option value = "선택" selected>-- 선택 --</option>
-           <option>1학년</option>
-           <option>2학년</option>
-           <option>3학년</option>
-       </select>
+                <option value = "선택" selected>-- 선택 --</option>
+                <option>1학년</option>
+                <option>2학년</option>
+                <option>3학년</option>
+                </select>
 
        <select name = "학기">
           <option value = "선택" selected>-- 선택 --</option>
