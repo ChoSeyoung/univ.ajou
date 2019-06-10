@@ -173,6 +173,8 @@ router.get('/schedule', (req, res, next) => {
     })
 });
 
+
+
 //해수//
 router.get('/leicity', (req, res, next) => {
     db.query("select city from `youth_agency` group by city ", (err, rows) => {
@@ -184,7 +186,6 @@ router.get('/leicity', (req, res, next) => {
         }
     });
 });
-
 
 router.get('/leifilter', (req, res, next) => {
     db.query("select * from `youth_agency`", (err, rows) => {
@@ -212,5 +213,6 @@ router.get('/getLeisure', (req,res,next) => {
     });
 });
 
+>>>>>>> 85373c0eb355a19d485f9f2c9a6e86bfc5935312
 
 module.exports = router;

@@ -6,23 +6,69 @@ import '../shared/common.css';
 class Timetable extends Component{
 
     state = {
-        user: []
+        school: '수원고등학교',
+        grade: [],
+        semester: [],
+        subject: []
     }
 
     componentDidMount(){
-        fetch("/schedule")
+        
+        fetch("/grade")
         .then(res => res.json())
-        .then(data => this.setState({user:data}))
+        .then(data => this.setState({grade:data}))
         .catch(err => console.log(err))
+
+        fetch("/semester")
+        .then(res => res.json())
+        .then(data => this.setState({semester:data}))
+        .catch(err => console.log(err))
+
+
+        fetch("/subject")
+        .then(res => res.json())
+        .then(data => this.setState({subject:data}))
+        .catch(err => console.log(err))
+
+    }
+
+    nameHandler = (e) => {
+        fetch("/peach?school="+e.target.value)
+            .then(res => res.json())
+            .then(data => this.setState({subject:data.rs}))
+        fetch("/banana?school="+e.target.value)
+            .then(res => res.json())
+            .then(data => this.setState({grade:data.rs}))
+        fetch("/apple?school="+e.target.value)
+        .then(res => res.json())
+        .then(data => this.setState({semester:data.rs}))    
     }
 
 
+
     render(){
-        const { user } = this.state;
         
-        const list = user.map(function(data){
+        const { grade } = this.state;
+        
+        const list = grade.map(function(data){
             return(
-                <tr>
+                <option>{data.grade}</option>
+            );
+        });
+
+        const { semester } = this.state;
+        
+        const list1 = semester.map(function(data){
+            return(
+                <option>{data.semester}</option>
+            );
+        });
+
+        const { subject } = this.state;
+        
+        const list2 = subject.map(function(data){
+            return(
+                <tr className = 'timetable'>
                 <td>{data.time}</td>
                 <td>{data.mon}</td>
                 <td>{data.tue}</td>
@@ -33,6 +79,11 @@ class Timetable extends Component{
             );
         });
 
+
+
+
+
+
         return(
             <Fragment>
                 <p className="vol_title">Timetable</p>
@@ -40,14 +91,14 @@ class Timetable extends Component{
                 
                 <br /><br /><br />
                 
-                <select name = "학년" >
+                <select className = 'filter' name = "학년" >
                 <option value = "선택" selected>-- 선택 --</option>
                 <option>1학년</option>
                 <option>2학년</option>
                 <option>3학년</option>
                 </select>
 
-       <select name = "학기">
+       <select className = 'filter' name = "학기">
           <option value = "선택" selected>-- 선택 --</option>
            <option>1학기</option>
            <option>2학기</option>
@@ -55,7 +106,7 @@ class Timetable extends Component{
 
                 <table>
                     <thead>
-                        <tr>
+                        <tr className = 'pig chicken'>
                            <td>교시</td>
                            <td>월</td> 
                            <td>화</td>
