@@ -87,8 +87,8 @@ aside{
 }
 
 #content{
-    width: calc(65% - 40px);
-    padding: 40px 20px 0 20px;
+    width: 65%;
+    padding: 0 20px 0 20px;
     float: right;
     text-align: center;
 }
