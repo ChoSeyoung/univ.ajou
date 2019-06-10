@@ -185,16 +185,6 @@ router.get('/leicity', (req, res, next) => {
     });
 });
 
-router.get('/leicategory', (req, res, next) => {
-    db.query("select category from `youth_agency` group by category ", (err, rows) => {
-        if(!err){
-            res.send(rows);
-        } else {
-            console.log(`query error : ${err}`);
-            res.send(err);
-        }
-    });
-});
 
 router.get('/leifilter', (req, res, next) => {
     db.query("select * from `youth_agency`", (err, rows) => {
@@ -209,9 +199,8 @@ router.get('/leifilter', (req, res, next) => {
 
 router.get('/getLeisure', (req,res,next) => {
     const a = (req.query.city);
-    const b = (req.query.category);
 
-    db.query("select * from `youth_agency` where city like '%"+a+"%' and category like '%"+b+"%'", (err, rows) => {
+    db.query("select * from `youth_agency` where city like '%"+a+"%'", (err, rows) => {
 
         if(!err){
             res.send({rs : rows})
