@@ -5,13 +5,13 @@ import { TransitionGroup } from 'react-transition-group';
 function Result(props) {
   return (
     <TransitionGroup
-      className="container result"
+      className="container"
       component="div"
-      transitionName="fade"
-      transitionEnterTimeout={800}
-      transitionLeaveTimeout={500}
-      transitionAppear
-      transitionAppearTimeout={500}
+      transitionname="fade"
+      transitionentertimeout={800}
+      transitionleavetimeout={500}
+      transitionappear
+      transitionappeartimeout={500}
     >
       <div>
         You prefer <strong>{props.quizResult}</strong>!
