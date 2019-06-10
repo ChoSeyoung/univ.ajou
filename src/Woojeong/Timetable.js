@@ -16,7 +16,7 @@ class Timetable extends Component {
             .catch(err => console.log(err))
     }
 
-
+ 
     _filterHandler = () => {
         const a = document.getElementById("grade").value;
         const b = document.getElementById("semester").value;
