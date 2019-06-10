@@ -19,7 +19,7 @@ class Urllist extends Component{
 
                
 
-                <span class = "url-title"> shopping mall top 5</span>
+                <p class = "url-title"> shopping mall top 5</p>
             
 
             <ul class = "woojeong-list" style ={{listStyle : "none"}}>
@@ -33,7 +33,7 @@ class Urllist extends Component{
             <br></br>
 
 
-            <span class = "url-title">study web site top 5</span>
+            <p class = "url-title">study web site top 5</p>
 
             <ul class = "woojeong-list" style ={{listStyle : "none"}}>
             <li><a href="https://www.megastudy.net/">1. My</a></li>
@@ -45,7 +45,7 @@ class Urllist extends Component{
 
             <br></br>
 
-            <span class = "url-title">game top 5</span>
+            <p class = "url-title">game top 5</p>
 
             <ul class = "woojeong-list" style ={{listStyle : "none"}}>
             <li><a href="https://zigzag.kr/">1. My</a></li>
@@ -58,7 +58,7 @@ class Urllist extends Component{
 
             <br></br>
 
-            <span class = "url-title">beauty top 5</span>
+            <p class = "url-title">beauty top 5</p>
 
             <ul class = "woojeong-list" style ={{listStyle : "none"}}>
             <li><a href="https://www.youtube.com/channel/UCT-_4GqC-yLY1xtTHhwY0hA">1. My</a></li>
