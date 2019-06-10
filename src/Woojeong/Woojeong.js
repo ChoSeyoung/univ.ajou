@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import TodoListTemplate from './components/TodoListTemplate';
 import Form from './components/Form';
 import TodoItemList from './components/TodoItemList';
+import '../shared/common.css';
 
 class woojung extends Component {
   
@@ -15,7 +16,7 @@ class woojung extends Component {
       { id: 1, text: ' 조장 지원이 ', checked: false },
       { id: 2, text: ' 기획 주연이', checked: false },
       { id: 3, text: ' 디자이너 해수', checked: false },
-      { id: 4, text: ' 디자이너 우정', checked: false },
+      { id: 4, text: ' 디자이너 우정', checked: false }, 
       
     ]
   }
@@ -85,7 +86,8 @@ class woojung extends Component {
 
     return (
       
-      
+      <Fragment>
+        <p className="vol_title">To do List</p>
       <TodoListTemplate form={(
         <Form 
           value={input}
@@ -96,6 +98,7 @@ class woojung extends Component {
       )}>
         <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
       </TodoListTemplate>
+      </Fragment>
       
     );
     

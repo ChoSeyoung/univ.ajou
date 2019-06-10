@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
 .todo-list-template {
   background: white;
   width: 512px;
@@ -9,9 +11,10 @@
 .title {
   padding: 2rem;
   font-size: 3rem;
+  font-family: 'Noto Sans KR';
   text-align: center;
   font-weight: 100;
-  background: #f1acac;;
+  background: rgba(255, 179, 166,1);;
   color: white;
 }
 
