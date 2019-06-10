@@ -35,10 +35,12 @@ class Seyoung extends Component {
         })
 
         return (
-            <div>
-                <p className="questionTitle">FIRST QUESTION</p>
+            <div className="quizWrapper">
+                <p className="questionTitle">주연이가 나 술맥여요!</p>
 
                 {entList}
+
+                <button className="viewResult">결과보기</button>
             </div>
         );
     }

@@ -35,5 +35,14 @@
             "answer3" : "TWICEcoaster: LANE1 - KNOCK KNOCK",
             "answer4" : "twicetagram - LIKEY"
         }
+    ],
+    "newQuestionList": [
+        {
+            "question" : "각 앨범과 타이틀곡명으로 바르게 연결되지 않은 것은?",
+            "answer1" : "THE STORY BEGINS - OOH-AHH하게",
+            "answer2" : "PAGE TWO - CHEER UP",
+            "answer3" : "TWICEcoaster: LANE1 - KNOCK KNOCK",
+            "answer4" : "twicetagram - LIKEY"
+        }
     ]
 }
