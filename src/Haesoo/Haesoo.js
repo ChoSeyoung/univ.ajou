@@ -3,10 +3,71 @@ import flower from '../shared/image/lunch.png';
 import '../shared/common.css';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 
+const abc = 
+[
+  {   "id": 0,
+      "location":"에스티에스 연구소",
+      "lat" : "37.293343",
+      "lng" : "126.9757024"
+  },
+  {   "id": 1,
+      "location":"경기도관광공사",
+      "lat" : "37.3156458",
+      "lng" : "126.9908111"
+  },
+  {
+      "id": 2,
+      "location": "한국스카우트경기남부연맹",
+      "lat" : "37.3044282",
+      "lng" : "126.9921439"
+  },
+  {
+      "id": 3,
+      "location":"장안청소년활동진흥센터",
+      "lat" : "37.2948417",
+      "lng" : "126.9991715"
+  },
+  {
+      "id": 4,
+      "location":"경기도청소년활동진흥센터",
+      "lat" : "37.3001217",
+      "lng" : "127.0077544"
+  },
+  {
+      "id": 5,
+      "location":"권선청소년수련관",
+      "lat" : "37.2511042",
+      "lng" : "127.0231932"
+  },
+  {
+    "id": 6,
+    "location":"무봉종합사회복지관",
+    "lat" : "37.2917314",
+    "lng" : "127.0237567"
+},
+{
+  "id": 7,
+  "location":"수원청소년문화센터",
+  "lat" : "37.2741861",
+  "lng" : "127.0345532"
+},
+{
+  "id": 8,
+  "location":"광교청소년수련관",
+  "lat" : "37.2856496",
+  "lng" : "127.0532998"
+},
+{
+  "id": 9,
+  "location":"영통청소년문화의집",
+  "lat" : "37.2526549",
+  "lng" : "127.069588"
+},
+    ]
+
 class Haesoo extends React.Component {
     state = {
       lei_city: [],
-      lei_category: [],
       lei_filter: [],
       data: [],
       showingInfoWindow: false,
@@ -41,11 +102,6 @@ class Haesoo extends React.Component {
       .then(haesoo => this.setState({ lei_city: haesoo }))
       .catch(err => console.log(err))
 
-    fetch('/leicategory')
-      .then(res => (res.json()))
-      .then(haesoo => this.setState({ lei_category: haesoo }))
-      .catch(err => console.log(err))
-
     fetch('/leifilter')
       .then(res => (res.json()))
       .then(haesoo => this.setState({ lei_filter: haesoo }))
@@ -58,14 +114,11 @@ class Haesoo extends React.Component {
   }
   
   _cityHandler = (e) => {
-    this.nameHandler(e.target.value, document.getElementById("category").value);
-  }
-  _categoryHandler = (e) => {
-    this.nameHandler(document.getElementById("city").value, e.target.value);
+    this.nameHandler(e.target.value);
   }
 
-  nameHandler(city, category){
-    fetch("/getLeisure?city=" + city + "&category=" + category)
+  nameHandler(city){
+    fetch("/getLeisure?city=" + city)
       .then(res => (res.json()))
       .then(data => this.setState({ data: data.rs }))
       .catch(err => console.log(err))
@@ -83,14 +136,6 @@ class Haesoo extends React.Component {
       )
     })
 
-    const { lei_category } = this.state;
-    const lei_category_list = lei_category.map(function (haesoo) {
-      return (
-        <option>
-          {haesoo.category}
-        </option>
-      )
-    })
 
     const { data } = this.state;
     const data_list = data.map(function (haesoo) {
@@ -112,7 +157,7 @@ class Haesoo extends React.Component {
     return (
       <Fragment>
         <img src={flower} alt="" style={{ position: "absolute", right: 50 }} />
-        <p className="vol_title">Volunteer</p>
+        <p className="vol_title">Leisure</p>
         <div className="filter_box">
           <div className="filter_group">
             <label>시/군</label>
@@ -121,15 +166,6 @@ class Haesoo extends React.Component {
               {lei_city_list}
             </select>
           </div>
-
-          <div className="filter_group">
-            <label>카테고리</label>
-            <br />
-            <select id="category" onChange={this._categoryHandler}>
-              {lei_category_list}
-            </select>
-          </div>
-
 
         </div>
 
@@ -140,6 +176,8 @@ class Haesoo extends React.Component {
         </div>
 
         <br />
+
+        
 
         <div className="filter_map">
           <Map google={this.props.google}
@@ -153,7 +191,49 @@ class Haesoo extends React.Component {
               name={'앙뇽'}
               position={{ lat: 37.286430, lng: 127.053768 }} />
 
+            <Marker
+              onClick={this.onMarkerClick}
+              name={abc[0].location}
+              position={{lat: abc[0].lat, lng: abc[0].lng}} /> 
+            
+            <Marker
+              onClick={this.onMarkerClick}
+              name={abc[1].location}
+              position={{lat: abc[1].lat, lng: abc[1].lng}} /> 
 
+            <Marker
+              onClick={this.onMarkerClick}
+              name={abc[2].location}
+              position={{lat: abc[2].lat, lng: abc[2].lng}} /> 
+
+            <Marker
+              onClick={this.onMarkerClick}
+              name={abc[3].location}
+              position={{lat: abc[3].lat, lng: abc[3].lng}} />
+
+            <Marker
+              onClick={this.onMarkerClick}
+              name={abc[4].location}
+              position={{lat: abc[4].lat, lng: abc[4].lng}} /> 
+
+            <Marker
+              onClick={this.onMarkerClick}
+              name={abc[5].location}
+              position={{lat: abc[5].lat, lng: abc[5].lng}} /> 
+            <Marker
+              onClick={this.onMarkerClick}
+              name={abc[6].location}
+              position={{lat: abc[6].lat, lng: abc[6].lng}} /> 
+
+            <Marker
+              onClick={this.onMarkerClick}
+              name={abc[7].location}
+              position={{lat: abc[7].lat, lng: abc[7].lng}} /> 
+
+            <Marker
+              onClick={this.onMarkerClick}
+              name={abc[8].location}
+              position={{lat: abc[8].lat, lng: abc[8].lng}} /> 
             <InfoWindow
               marker={this.state.activeMarker}
               visible={this.state.showingInfoWindow}
