@@ -173,4 +173,29 @@ router.get('/schedule', (req, res, next) => {
     })
 });
 
+router.get('/peach', (req, res, next) => {
+    console.log(req.query.name)
+    const p = req.query.name;
+    db.query("select * from `schedule` where subject='"+p+"' ", (err, rows) => {
+        res.send({rs : rows})
+    });
+});
+
+
+
+
+router.get('/banana', (req, res, next) => {
+    const p = req.query.name;
+    db.query("select * from `schedule` where grade='"+p+"' ", (err,rows) => {
+        res.send({ rs: rows})
+    });
+})
+
+router.get('/apple', (req, res, next) => {
+    const p = req.query.name;
+    db.query("select * from `schedule` where semester='"+p+"' ", (err,rows) => {
+        res.send({ gs: rows})
+    });
+})
+
 module.exports = router;
