@@ -176,9 +176,8 @@ class Haesoo extends React.Component {
         </div>
 
         <br />
-        <br>
-        <p className="rem08">"수원시 인기 여가활동 위치 보여주기!"</p>
-        </br>
+
+        
 
         <div className="filter_map">
           <Map google={this.props.google}
