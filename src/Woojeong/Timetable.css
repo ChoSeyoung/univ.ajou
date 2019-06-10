@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
+.timeTable{
+    width: 100%;
+    height: 500px;
+    border-spacing: 0;
+    font-family: 'Noto Sans KR';
+}
+.timeTable > * > td,
+.timeTable > * > th{
+    padding: 0;
+    height: 52.8px;
+}
+.filter_group{
+    text-align: left;
+}
+
+.filter{
+    width: 150px;
+    height: 50px;
+    border: 0;
+    border-bottom: 3px solid rgba(255, 179, 166,1);
+    margin: 0 10px 0 10px;
+}
+
+.each-class-head{
+    border-bottom: 1px solid rgb(255,179,166);
+}
+.each-class-body{
+    border-right: 1px solid rgb(255,179,166);
+}
