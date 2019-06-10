@@ -40,7 +40,7 @@ class Urllist extends Component{
 
             <br></br>
 
-            <p class = "url-title">Game top 5</p>
+            <p class = "url-title">Game top 5</p> 
 
             <ul class = "woojeong-list" style ={{listStyle : "none"}}>
             <li><a href="https://www.youtube.com/channel/UCbFzvzDu17eDZ3RIeaLRswQ">1. 감스트GAMST</a></li>
