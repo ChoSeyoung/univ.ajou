@@ -213,6 +213,4 @@ router.get('/getLeisure', (req,res,next) => {
     });
 });
 
->>>>>>> 85373c0eb355a19d485f9f2c9a6e86bfc5935312
-
 module.exports = router;
