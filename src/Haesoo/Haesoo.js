@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import flower from '../shared/image/lunch.png';
 import '../shared/common.css';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
+import {Link} from 'react-router-dom';
 
 const abc = 
 [
@@ -65,7 +66,7 @@ const abc =
 },
     ]
 
-class Haesoo extends React.Component {
+class Haesoo extends Component {
     state = {
       lei_city: [],
       lei_filter: [],
@@ -146,7 +147,6 @@ class Haesoo extends React.Component {
           <p className="rem09"><a href={haesoo.e_address}>{haesoo.e_address}</a></p>
           <p className="rem15"><b>{haesoo.category}</b></p>
           <p className="rem08">{haesoo.phone_number}</p>
-          <p className="rem08"><a href="#">위치보기</a></p>
 
         </div>
       )
@@ -177,8 +177,9 @@ class Haesoo extends React.Component {
 
         <br />
 
-        
-
+        <br />
+        <p className="rem15"><b>★★수원시 인기 여가활동 위치★★</b></p>
+        <br />
         <div className="filter_map">
           <Map google={this.props.google}
             style={{ width: '62%', height: '94%', position: 'relative' }}
@@ -188,7 +189,7 @@ class Haesoo extends React.Component {
 
             <Marker
               onClick={this.onMarkerClick}
-              name={'앙뇽'}
+              name={'아주대입니다'}
               position={{ lat: 37.286430, lng: 127.053768 }} />
 
             <Marker
