@@ -2,7 +2,7 @@
 <pre>https://blog.naver.com/choseyoung45/221552706274</pre>
 
 <h1>최초 git pull시 다음 패키지 설치 필수</h1>
-<pre><code>yarn add morgan nodemon concurrently --dev
+<pre><code>yarn install
 </code></pre>
 
 <h1>secure.json</h1>

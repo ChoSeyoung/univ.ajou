@@ -105,7 +105,7 @@ router.get("/api/isSignup", (req, res) => {
     
     const userId = req.query.id;
     const userPw = req.query.pw;
-    const userEmail = req.query.email;
+    const userEmail = req.queㄴry.email;
     const userName = req.query.name;
 
     db.query("select count(*) as cnt from getuser where id='"+userId+"' and pw='"+userPw+"' and email='"+userEmail+"' and name='"+userName+"'", (err, rows, fields) => {
@@ -173,29 +173,46 @@ router.get('/schedule', (req, res, next) => {
     })
 });
 
-router.get('/peach', (req, res, next) => {
-    console.log(req.query.name)
-    const p = req.query.name;
-    db.query("select * from `schedule` where subject='"+p+"' ", (err, rows) => {
-        res.send({rs : rows})
+
+
+//해수//
+router.get('/leicity', (req, res, next) => {
+    db.query("select city from `youth_agency` group by city ", (err, rows) => {
+        if(!err){
+            res.send(rows);
+        } else {
+            console.log(`query error : ${err}`);
+            res.send(err);
+        }
     });
 });
 
-
-
-
-router.get('/banana', (req, res, next) => {
-    const p = req.query.name;
-    db.query("select * from `schedule` where grade='"+p+"' ", (err,rows) => {
-        res.send({ rs: rows})
+router.get('/leifilter', (req, res, next) => {
+    db.query("select * from `youth_agency`", (err, rows) => {
+        if(!err){
+            res.send(rows);
+        } else {
+            console.log(`query error : ${err}`);
+            res.send(err);
+        }
     });
-})
+});
 
-router.get('/apple', (req, res, next) => {
-    const p = req.query.name;
-    db.query("select * from `schedule` where semester='"+p+"' ", (err,rows) => {
-        res.send({ gs: rows})
+router.get('/getLeisure', (req,res,next) => {
+    const a = (req.query.city);
+
+    db.query("select * from `youth_agency` where city like '%"+a+"%'", (err, rows) => {
+
+        if(!err){
+            res.send({rs : rows})
+        } else {
+            console.log(`query error : ${err}`);
+            res.send(err);
+        }
+    
     });
-})
+});
+
+>>>>>>> 85373c0eb355a19d485f9f2c9a6e86bfc5935312
 
 module.exports = router;
