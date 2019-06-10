@@ -14,6 +14,7 @@ import Urllist from './Woojeong/Urllist';
 import Timetable from './Woojeong/Timetable';
 import quizNew from './Juyeon/quiz-new/App';
 import quizEnt from './Juyeon/quiz-new/App';
+import seyoung from './Juyeon/Seyoung';
 
 class App extends Component {
     render() {
@@ -33,7 +34,7 @@ class App extends Component {
                     <Route path="/urllist" component={Urllist} />
                     <Route path="/quiz/new" component={quizNew}/>
                     <Route path="/quiz/ent" component={quizEnt}/>
-
+                    <Route path="/seyoung" component={seyoung}/>
                 </Switch>
                 </div>
             </Router>

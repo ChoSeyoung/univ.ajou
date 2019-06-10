@@ -157,7 +157,7 @@ class Jooyeon extends React.Component{
 
                 {meal_week}
 
-                <img src={adv}/>
+                <img src={adv} alt=""/>
                
             </Fragment>
         );
