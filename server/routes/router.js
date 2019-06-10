@@ -51,8 +51,6 @@ router.get('/schoolname', (req, res, next) => {
 
 
 //지원추가 
-
-
 router.get('/date', (req, res) => {
     db.query("select vol_date from `volunteer` group by vol_date", (err, rows) => {
         if(!err) {
@@ -76,8 +74,6 @@ router.get('/vol', (req, res) => {
 })
 
 
-
-
 router.get('/black', (req, res, next) => {
     console.log(req.query.name)
     const p = req.query.name;
@@ -85,9 +81,6 @@ router.get('/black', (req, res, next) => {
         res.send({rm : rows})
     });
 });
-
-
-
 
 router.get("/api/isLogin", (req, res) => {
     
@@ -212,5 +205,19 @@ router.get('/getLeisure', (req,res,next) => {
     
     });
 });
+
+router.get('/plz', (req, res) => {
+    const grade = req.query.grade;
+    const semester = req.query.semester;
+    
+    db.query("select * from schedule where grade="+grade+" and semester="+semester+" and class=1", (err, rows) => {
+        if(err){
+            console.log(err)
+            res.send(err);
+        }else{
+            res.send({rs:rows})
+        }
+    }) 
+})
 
 module.exports = router;
