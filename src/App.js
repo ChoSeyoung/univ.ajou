@@ -13,7 +13,7 @@ import Signup from './Jiwon/Signup';
 import Urllist from './Woojeong/Urllist';
 import Timetable from './Woojeong/Timetable';
 import quizNew from './Juyeon/quiz-new/App';
-import quizEnt from './Juyeon/quiz-new/App';
+import quizEnt from './Juyeon/quiz-ent/App';
 import seyoung from './Juyeon/Seyoung';
 
 class App extends Component {
