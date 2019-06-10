@@ -29,7 +29,7 @@ class Aside extends Component{
                 <a href = "http://localhost:3000/urllist">urllist</a>
                 </h2>
                 <div className="copywriter">
-                    <span>@ajou</span>
+                    <span>아주대는 우정이꼬</span>
                 </div>
             </aside>
         );
