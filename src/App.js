@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
+
+
 import Aside from './Components/Aside';
 
 import Juyeon from './Juyeon/Juyeon';
@@ -16,6 +18,7 @@ import Timetable from './Woojeong/Timetable';
 import quizNew from './Juyeon/quiz-new/App';
 import quizEnt from './Juyeon/quiz-ent/App';
 import seyoung from './Juyeon/Seyoung';
+import calendar from './Haesoo/calendar';
 
 class App extends Component {
     render() {
@@ -37,6 +40,7 @@ class App extends Component {
                     <Route path="/quiz/new" component={quizNew}/>
                     <Route path="/quiz/ent" component={quizEnt}/>
                     <Route path="/seyoung" component={seyoung}/>
+                    <Route path="/calendar" component={calendar}/>
                 </Switch>
                 </div>
             </Router>

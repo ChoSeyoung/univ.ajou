@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import flower from '../shared/image/lunch.png';
 import '../shared/common.css';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
-import {Link} from 'react-router-dom';
 
 const abc = 
 [
@@ -178,7 +177,7 @@ class Haesoo extends Component {
         <br />
 
         <br />
-        <p className="rem15"><b>★★수원시 인기 여가활동 위치★★</b></p>
+        <p className="rem15"><b>☆★수원시 인기 여가활동 위치★☆</b></p>
         <br />
         <div className="filter_map">
           <Map google={this.props.google}

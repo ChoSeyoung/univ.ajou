@@ -3,7 +3,7 @@ import './TodoListTemplate.css';
 
 const TodoListTemplate = ({form, children}) => {
   return (
-    <main className="todo-list-template">
+    <div className="todo-list-template">
       <div className="title">
         오늘의 할 일
       </div>
@@ -13,7 +13,7 @@ const TodoListTemplate = ({form, children}) => {
       <section className="todos-wrapper">
         { children }
       </section>
-    </main>
+    </div>
   );
 };
 
