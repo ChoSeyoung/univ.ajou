@@ -1,0 +1,14 @@
+.haesoo-wrapper{
+    width: 100%;
+    margin-top: 100px;
+}
+
+.hs{
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+    margin-right: 20px;
+    border: 0;
+    width: 512px;
+    height: 490px;
+}
