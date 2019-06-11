@@ -17,30 +17,37 @@ class Seyoung extends Component {
         })
         
     }
-
+    
+    println = (e) =>  {
+        console.log(e.target.parentElement);
+        console.log(e.target.parentElement.childElementCount);
+        console.log(e.target.innerText);
+        
+    }
+    
     render(){
         const {entQuestionList} = this.state;
-        const entList = entQuestionList.map(function(data){
+        const entList = entQuestionList.map((data, index) => {
             return(
                 <div>
                     <p className="question">{data.question}</p>
-                    <ul className="answerList">
-                        <li>{data.answer1}</li>
-                        <li>{data.answer2}</li>
-                        <li>{data.answer3}</li>
-                        <li>{data.answer4}</li>
+                    <ul className="answerList" id={`q${index+1}`}>
+                        <li onClick={this.println}>{data.answer1}</li>
+                        <li onClick={this.println}>{data.answer2}</li>
+                        <li onClick={this.println}>{data.answer3}</li>
+                        <li onClick={this.println}>{data.answer4}</li>
                     </ul>
                 </div>
             );
         })
 
         return (
-            <div className="quizWrapper">
-                <p className="questionTitle">주연이가 나 술맥여요!</p>
+            <div>
+                <p className="questionTitle">ent quiz</p>
 
                 {entList}
 
-                <button className="viewResult">결과보기</button>
+                <button className="viewResult">view result</button>
             </div>
         );
     }

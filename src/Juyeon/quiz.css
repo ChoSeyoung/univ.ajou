@@ -5,9 +5,6 @@ ul{
     list-style: none;
     padding : 0;
 }
-.quizWrapper{
-    width: 100%;
-}
 .questionTitle{
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
