@@ -5,12 +5,16 @@ ul{
     list-style: none;
     padding : 0;
 }
+.quizWrapper{
+    width: 800px;
+    margin: 50px auto;
+}
 .questionTitle{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 3rem;
     text-align: center;
     background-color: lightcoral;
-    width: 90%;
+    width:100%;
     margin: 10px auto;
     padding: 10px;
     color: white;
@@ -19,7 +23,7 @@ ul{
     text-align: center;
     font-family: 'Nanum Gothic';
     font-size: 1.5rem;
-    width:90%;
+    width:100%;
 }
 
 .answerList {
@@ -33,7 +37,7 @@ ul{
     padding: 15px 0 15px 0;
     cursor: pointer;
     color: #444;
-    width: 90%;
+    width:100%;
 }
 .answerList li:hover{
     font-weight: bold;
@@ -48,5 +52,4 @@ ul{
     font-size: 1rem;
     font-weight: bold;
     color : rgb(255,179,166);
-    margin-bottom: 50px;
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./quiz.css";
 import Question from "./test.json";
+import $ from 'jquery';
 
 class Seyoung extends Component {
     constructor(props) {
@@ -19,10 +20,22 @@ class Seyoung extends Component {
     }
     
     println = (e) =>  {
-        console.log(e.target.parentElement);
-        console.log(e.target.parentElement.childElementCount);
-        console.log(e.target.innerText);
-        
+        let target = e.target.innerText;
+        let parent = e.target.parentElement;
+        let child = parent.getElementsByTagName("li");
+
+        for(let i = 0 ; i < child.length ; i++){
+            //console.log(target + "/" + child[i].innerText)
+            if(target == child[i].innerText){
+                child[i].style.color = "rgb(240,128,128)";
+                child[i].style.backgroundColor = "rgba(240,128,128,0.1)";
+                child[i].style.fontWeight = "bold";
+            }else{
+                child[i].style.color = "black";
+                child[i].style.backgroundColor = "white";
+                child[i].style.fontWeight = "normal";
+            }
+        }
     }
     
     render(){
@@ -42,12 +55,12 @@ class Seyoung extends Component {
         })
 
         return (
-            <div>
-                <p className="questionTitle">ent quiz</p>
+            <div className="quizWrapper">
+                <p className="questionTitle">연예퀴-즈</p>
 
                 {entList}
 
-                <button className="viewResult">view result</button>
+                <button className="viewResult">결과보기</button>
             </div>
         );
     }
