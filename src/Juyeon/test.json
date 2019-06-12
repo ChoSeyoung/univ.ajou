@@ -1,48 +1,76 @@
 {
     "entQuestionList": [
         {
-            "question" : "지민이가 생각하는 본인의 매력 포인트는?",
-            "answer1" : "모찌 피부",
-            "answer2" : "부은 눈",
-            "answer3" : "아찔한 목라인",
-            "answer4" : "남다른 복근"
+            "question" : "방탄소년단 멤버수는?",
+            "answer1" : "5명",
+            "answer2" : "6명",
+            "answer3" : "7명",
+            "answer4" : "8명"
         },
         {
-            "question" : "2017년 수상한 시상식과 부문이 바르게 연결되지 않은 것은?",
-            "answer1" : "골든 디스크-디지털 음원 부문 대상",
-            "answer2" : "엠넷 아시안 뮤직 어워드-올해의 노래상",
-            "answer3" : "멜론 뮤직 어워드-베스트송상",
-            "answer4" : "가온차트 뮤직 어워드-올해의 가수상 음원"
+            "question" : "뷔의 별명은?",
+            "answer1" : "뷔탄",
+            "answer2" : "태순",
+            "answer3" : "태태",
+            "answer4" : "형태"
         },
         {
-            "question" : "멤버별 별자리가 잘못 연결된 것은?",
-            "answer1" : "다현-쌍둥이자리",
-            "answer2" : "모모-전갈자리",
-            "answer3" : "미나-황소자리",
-            "answer4" : "사나-염소자리"
+            "question" : "정국의 생일은?",
+            "answer1" : "5월 8일",
+            "answer2" : "12월 7일",
+            "answer3" : "3월 9일",
+            "answer4" : "9월 1일"
         },
         {
-            "question" : "가요 프로그램에서 1위를 차지하지 못한 노래는?",
-            "answer1" : "OOH-AHH하게",
-            "answer2" : "LIKEY",
-            "answer3" : "SIGNAL",
-            "answer4" : "HEART SHAKER"
+            "question" : "방탄소년단의 데뷔날짜는?",
+            "answer1" : "2014년 3월 6일",
+            "answer2" : "2013년 6월 13일",
+            "answer3" : "2012년 6월 13일",
+            "answer4" : "2014년 8월 17일"
         },
         {
-            "question" : "각 앨범과 타이틀곡명으로 바르게 연결되지 않은 것은?",
-            "answer1" : "THE STORY BEGINS - OOH-AHH하게",
-            "answer2" : "PAGE TWO - CHEER UP",
-            "answer3" : "TWICEcoaster: LANE1 - KNOCK KNOCK",
-            "answer4" : "twicetagram - LIKEY"
+            "question" : "방탄소년단에서 막내인 멤버는?",
+            "answer1" : "정국",
+            "answer2" : "진",
+            "answer3" : "지민",
+            "answer4" : "제이홉"
         }
     ],
     "newQuestionList": [
         {
-            "question" : "각 앨범과 타이틀곡명으로 바르게 연결되지 않은 것은?",
-            "answer1" : "THE STORY BEGINS - OOH-AHH하게",
-            "answer2" : "PAGE TWO - CHEER UP",
-            "answer3" : "TWICEcoaster: LANE1 - KNOCK KNOCK",
-            "answer4" : "twicetagram - LIKEY"
+            "question" : "신조어와 그 뜻이 틀린것은?",
+            "answer1" : "#G : 삽질",
+            "answer2" : "세젤예 : 세상에서 제일 예쁘다",
+            "answer3" : "방커머튽 으어뚠어뚠 : 방귀대장 뿡뿡이",
+            "answer4" : "복세편살 : 복잡한 세상 편하게 살자"
+        },
+        {
+            "question" : "'팬아저'에 대해 바르게 설명하고 있는 사람은?",
+            "answer1" : "우정 : 팬이 아저씨면 저는 싫다는 뜻으로 담겨있어",
+            "answer2" : "해수 : 팬들이랑 함께 아침먹고 저녁 먹어야 한다는 뜻!",
+            "answer3" : "주연 : 팬은 아닌데 일단 저장하는 사진의 줄임말이야",
+            "answer4" : "지원 : 팬 아니면 저리 가라는 뜻이 아닐까?"
+        },
+        {
+            "question" : "'경우에따라서', '개별적으로'라는 뜻으로 줄여서 하는 말은?",
+            "answer1" : "복세편살",
+            "answer2" : "소확행",
+            "answer3" : "별다줄",
+            "answer4" : "케바케"
+        },
+        {
+            "question" : "'과하게 말이 많다'라는 뜻의 신조어는?",
+            "answer1" : "넘모",
+            "answer2" : "꿀잼",
+            "answer3" : "비정",
+            "answer4" : "TMI"
+        },
+        {
+            "question" : "나이만 앞세워서 우대받기를 바라는 의미의 신조어는?",
+            "answer1" : "인싸",
+            "answer2" : "넘모",
+            "answer3" : "#G",
+            "answer4" : "나일리지"
         }
     ]
 }
