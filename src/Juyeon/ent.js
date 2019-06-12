@@ -3,7 +3,7 @@ import "./quiz.css";
 import Question from "./test.json";
 import $ from 'jquery';
 
-class Seyoung extends Component {
+class ent extends Component {
     constructor(props) {
         super(props);
 
@@ -60,11 +60,11 @@ class Seyoung extends Component {
 
                 {entList}
 
-                <button className="viewResult">결과보기</button>
+                <button className="viewResult"><a href="/quizresult">결과보기</a></button>
             </div>
         );
     }
 }
 
-export default Seyoung;
+export default ent;
 
