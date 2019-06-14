@@ -5,13 +5,13 @@
 <pre>yarn install</pre>
 
 <h1>secure.json</h1>
-<pre><code>{
+<pre>{
     "host" : "localhost",
     "port" : 3306,
     "user" : "root",
     "password" : "root",
     "database" : "test"
-}</code></pre>
+}</pre>
 
 <h1>다음 기술들을 이용하여 만들어졌습니다.</h1>
-<pre>HTML, CSS, JAVASCRIPT, JQUERY, REACT.JS, NODE.JS, EXPRESS.JS, MARIADB, 공공데이터포털, NICE E-청소년</pre>
+<pre>HTML, CSS, JAVASCRIPT, JQUERY, REACT.JS, NODE.JS, EXPRESS.JS, MARIADB, 공공데이터포털 API, NICE E-청소년 API</pre>
