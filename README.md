@@ -2,7 +2,7 @@
 
 
 <h1>최초 git pull 시 다음 명령어를 수행합니다.</h1>
-<pre><code>yarn install</code></pre>
+<pre>yarn install</pre>
 
 <h1>secure.json</h1>
 <pre><code>{
